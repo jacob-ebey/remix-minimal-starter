@@ -1,0 +1,107 @@
+* {
+  border-color: #1a1a1a;
+  border-style: solid;
+  border-width: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #444;
+  line-height: 1.4;
+}
+
+a {
+  color: #0066cc;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    border-color: #444;
+  }
+
+  body {
+    background-color: #1a1a1a;
+    color: rgb(245, 245, 245);
+    border-color: rgb(245, 245, 245);
+  }
+
+  a {
+    color: #0099ff;
+  }
+}
+
+.container,
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.container,
+.navbar ul {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .container,
+  .navbar {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* #region .navbar */
+
+.navbar {
+  border-bottom-width: 1px;
+}
+
+.navbar ul {
+  display: flex;
+
+  /* Space out the content */
+  gap: 0.75rem;
+  padding: 0;
+
+  /* Reset list styles */
+  list-style-type: none;
+}
+
+.navbar > ul {
+  flex-direction: column;
+}
+
+.navbar > ul ul {
+  align-items: center;
+}
+
+.navbar > ul ul li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar > ul ul > li:not(:last-child)::after {
+  margin-left: 0.75rem;
+  content: '/';
+  font-size: larger;
+}
+
+.navbar__title {
+  font-size: x-large;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar > ul {
+    /* Content is centered vertically */
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .navbar__item--right {
+    /* Sticks to the right */
+    margin-left: auto;
+  }
+}
+
+/* #endregion .navbar */
