@@ -1,0 +1,41 @@
+@import './_variables.scss';
+
+* {
+  border-color: $border-color;
+  border-style: solid;
+  border-width: 0;
+
+  @media (prefers-color-scheme: dark) {
+    border-color: $border-color-dark;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: $font-color;
+  line-height: 1.4;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #1a1a1a;
+    color: $font-color-dark;
+  }
+}
+
+a {
+  color: $link-color;
+
+  @media (prefers-color-scheme: dark) {
+    color: $link-color-dark;
+  }
+}
+
+.container {
+  padding: 0.5rem 1rem;
+  max-width: $container-width;
+  margin: 0 auto;
+
+  @media only screen and (min-width: $br-md) {
+    padding: 0.75rem 1.25rem;
+  }
+}

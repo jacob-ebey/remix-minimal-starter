@@ -1,0 +1,56 @@
+@import './_variables.scss';
+
+.navbar {
+  border-bottom-width: 1px;
+  padding: 0.5rem 1rem;
+
+  @media only screen and (min-width: $br-md) {
+    padding: 0.75rem 1.25rem;
+  }
+
+  & ul {
+    display: flex;
+
+    max-width: 1080px;
+    margin: 0 auto;
+    gap: 0.75rem;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  & > ul {
+    flex-direction: column;
+
+    @media only screen and (min-width: $br-md) {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    & ul {
+      align-items: center;
+
+      & li {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      & > li:not(:last-child)::after {
+        margin-left: 0.75rem;
+        content: '/';
+        font-size: larger;
+      }
+    }
+  }
+
+  &__title {
+    font-size: x-large;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  &__item--right {
+    @media only screen and (min-width: $br-md) {
+      margin-left: auto;
+    }
+  }
+}

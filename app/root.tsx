@@ -12,11 +12,11 @@ import type { LinksFunction, MetaFunction } from '@remix-run/node';
 
 import { createMeta } from '~/meta';
 
-import normalizeStylesHref from 'normalize.css/normalize.css';
+// import normalizeStylesHref from 'normalize.css/normalize.css';
 import stylesHref from './styles.css';
 
 export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: normalizeStylesHref },
+  // { rel: 'stylesheet', href: normalizeStylesHref },
   { rel: 'stylesheet', href: stylesHref },
 ];
 
